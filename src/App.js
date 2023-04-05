@@ -12,20 +12,6 @@ import './App.css';
 function App() {
     const [shadow, setShadow] = useState({x: 0, y: 0});
 
-    const http = require('http')
-    const hostname = 'ftp.4943.com.ua';
-    const port = 21;
-
-    const server = http.createServer((req, res) => {
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/plain');
-        res.end('Hello World! NodeJS \n');
-    });
-
-    server.listen(port, hostname, () => {
-        console.log(`Server running at http://${hostname}:${port}/`);
-    });
-
     const handleMouseMove = (e) => {
         const xPos = e.clientX;
         const yPos = e.clientY;
