@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import imgLogo from "./img/logo_dots_black.png";
 import imgTelegram from "./img/telegram.png";
 import imgInstagram from "./img/instagram.png";
-import pdfPricelist from "./rsc/Roof-price.pdf";
 import './App.css';
 
 function App() {
@@ -40,8 +39,9 @@ function App() {
       </div>
       <div className="button-container">
         <button onClick={downloadFile}>Price List</button>
-        <button onClick={() => window.location.href="https://t.me/roofspecialty"}><img src={imgTelegram}/></button>
-        <button onClick={() => window.location.href="https://www.instagram.com/roof.specialty.coffee/"}><img src={imgInstagram}/></button>
+        <button onClick={() => window.location.href="https://t.me/roofspecialty"}><img src={imgTelegram} alt="Telegram icon"/></button>
+        <button onClick={() => window.location.href="https://www.instagram.com/roof.specialty.coffee/"}><img src={imgInstagram} alt="Instagram icon
+        "/></button>
       </div>
     </div>
   );
