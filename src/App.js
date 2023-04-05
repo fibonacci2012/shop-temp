@@ -12,6 +12,20 @@ import './App.css';
 function App() {
     const [shadow, setShadow] = useState({x: 0, y: 0});
 
+    const http = require('http')
+    const hostname = 'ftp.4943.com.ua';
+    const port = 21;
+
+    const server = http.createServer((req, res) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end('Hello World! NodeJS \n');
+    });
+
+    server.listen(port, hostname, () => {
+        console.log(`Server running at http://${hostname}:${port}/`);
+    });
+
     const handleMouseMove = (e) => {
         const xPos = e.clientX;
         const yPos = e.clientY;
@@ -39,14 +53,14 @@ function App() {
 
     return (
         <div className="container" onMouseMove={handleMouseMove}>
-            <div className="logo-container" >
-                <img src={imgLogo1} style={{boxShadow:  `${shadow.x}px ${shadow.y}px 10px rgba(0, 0, 0, 0.5)`}}
+            <div className="logo-container">
+                <img src={imgLogo1} style={{boxShadow: `${shadow.x}px ${shadow.y}px 10px rgba(0, 0, 0, 0.5)`}}
                      alt="Logo"/>
-             <img src={imgLogo2} style={{boxShadow:  `${shadow.x}px ${shadow.y}px 10px rgba(0, 0, 0, 0.5)`}}
+                <img src={imgLogo2} style={{boxShadow: `${shadow.x}px ${shadow.y}px 10px rgba(0, 0, 0, 0.5)`}}
                      alt="Logo"/>
-                <img src={imgLogo3} style={{boxShadow:  `${shadow.x}px ${shadow.y}px 10px rgba(0, 0, 0, 0.5)`}}
+                <img src={imgLogo3} style={{boxShadow: `${shadow.x}px ${shadow.y}px 10px rgba(0, 0, 0, 0.5)`}}
                      alt="Logo"/>
-                <img src={imgLogo4} style={{boxShadow:  `${shadow.x}px ${shadow.y}px 10px rgba(0, 0, 0, 0.5)`}}
+                <img src={imgLogo4} style={{boxShadow: `${shadow.x}px ${shadow.y}px 10px rgba(0, 0, 0, 0.5)`}}
                      alt="Logo"/>
 
 
