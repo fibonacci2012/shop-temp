@@ -6,7 +6,6 @@ import imgLogo1 from "./img/dot1.png";
 import imgTelegram from "./img/telegram.png";
 import imgInstagram from "./img/instagram.png";
 import imgPricelist from "./img/pricelist.png";
-import pdfPricelist from "./rsc/Roof-price.pdf"
 import './App.css';
 
 function App() {
